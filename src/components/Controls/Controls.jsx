@@ -1,8 +1,14 @@
-function Controls(){
+import { filterDropDown } from "../../utils/utils";
+
+function Controls({ abilities }){
+    const filter = filterDropDown(abilities)
+    console.log(filter);
     return (
-        <>
-            <h1>Hi from Controls</h1>
-        </>
+        <select>
+            {filter.map(category => (
+                <option value={category}>{category}</option>
+            ))}
+        </select>
     )
 }
 export default Controls;

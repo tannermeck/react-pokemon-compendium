@@ -43,7 +43,7 @@ function Compendium(){
             {loading ? 
                 <img id="pokeball" alt="pokeball" src='https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif'/> :
                 <div>
-                    <Controls />
+                    <Controls abilities={abilityArray} />
                     <PokemonList pokemon={pokemonList}/>   
                 </div>
             }
