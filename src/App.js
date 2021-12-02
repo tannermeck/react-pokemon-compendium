@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Compendium from './views/Compendium';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <h1>Pokemon: Catch 'em All!</h1>
       </div>
       <div className="container">
+        <Compendium />
       </div>
     </section>
   );
