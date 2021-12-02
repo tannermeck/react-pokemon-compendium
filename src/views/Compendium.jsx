@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import fetchPokemon from '../services/helper-functions';
 import './compendium.css';
 
 function Compendium(){
-    const [loading, setLoading] = useState(false)
-    // if (loading)
+    const [loading, setLoading] = useState(true)
+    const [pokemonList, setPokemonList] = useState([])
+    
+    useEffect(() => {
+        setLoading(true)
+        async function getPokemon(){
+        const pokemonArray = await fetchPokemon();
+        setPokemonList(pokemonArray);
+        setLoading(false)
+        }
+        getPokemon()
+    }, [])
     return (
         <>
             {loading ? 
