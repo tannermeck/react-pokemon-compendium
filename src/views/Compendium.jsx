@@ -28,22 +28,24 @@ function Compendium(){
         getAllAbilities();
     }, [])
 
-    // useEffect(() => {
-    //     setLoading(true)
-    //     async function getAbility(){
-    //         const filteredPokemon = await fetchByAbility(selectedAbility);
-    //         setPokemonList(filteredPokemon);
-    //         setLoading(false);
-    //     }
-    //     getAbility();
-    // }, [selectedAbility])
+    useEffect(() => {
+        async function getAbility(){
+            if (!selectedAbility) return;
+            setLoading(true)
+            const filteredPokemon = await fetchByAbility(selectedAbility);
+            setPokemonList(filteredPokemon);
+            setLoading(false);
+            // setSelectedAbility('')
+        }
+        getAbility();
+    }, [selectedAbility])
 
     return (
         <>
             {loading ? 
                 <img id="pokeball" alt="pokeball" src='https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif'/> :
                 <div>
-                    <Controls abilities={abilityArray} />
+                    <Controls abilities={abilityArray} selectedAbility={selectedAbility} handleChange={setSelectedAbility}/>
                     <PokemonList pokemon={pokemonList}/>   
                 </div>
             }

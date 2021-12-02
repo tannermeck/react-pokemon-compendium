@@ -1,12 +1,11 @@
 import { filterDropDown } from "../../utils/utils";
 
-function Controls({ abilities }){
+function Controls({ abilities, selectedAbility, handleChange }){
     const filter = filterDropDown(abilities)
-    console.log(filter);
     return (
-        <select>
+        <select value={selectedAbility} onChange={(e) => handleChange(e.target.value)}>
             {filter.map(category => (
-                <option value={category}>{category}</option>
+                <option key={category} value={category}>{category}</option>
             ))}
         </select>
     )
