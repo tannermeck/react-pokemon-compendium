@@ -1,7 +1,6 @@
 import './pokemon.css';
 
 function Pokemon({ pokemon }){
-    console.log(pokemon)
     return (
         <ul>
             {pokemon.map(character => (
