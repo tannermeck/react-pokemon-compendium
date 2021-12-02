@@ -1,3 +1,21 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pokeContainer {
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 1px black;
+    width: fit-content;
+    margin: 20px;
+}
+.pokemonName {
+    color: white;
+    list-style: none;
+    text-transform:capitalize;
+    font-weight: bolder;
+    text-align: center;
+}
 .pokemonImage {
     height: 200px !important;
     width: 200px !important;

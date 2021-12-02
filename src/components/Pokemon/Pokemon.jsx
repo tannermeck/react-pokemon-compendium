@@ -5,8 +5,8 @@ function Pokemon({ pokemon }){
     return (
         <ul>
             {pokemon.map(character => (
-                <div>
-                    <li key={character.pokemon}>{character.pokemon}</li>
+                <div className="pokeContainer">
+                    <li className="pokemonName" key={character.pokemon}>{character.pokemon}</li>
                     <img className="pokemonImage" alt={character.pokemon} src={character.url_image} />
                 </div>
             ))}
