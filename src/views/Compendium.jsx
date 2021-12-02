@@ -31,31 +31,20 @@ function Compendium(){
     useEffect(() => {
         async function getAbility(){
             if (!selectedAbility) return;
-            // if (selectedAbility !== 'all'){
                 setLoading(true)
                 const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility) : await fetchPokemon();;
                 setPokemonList(filteredPokemon);
                 setLoading(false);
-            // } else {
-            //     const pokemonArray = await fetchPokemon();
-            //     setPokemonList(pokemonArray);
-            //     setLoading(false);
-            // }
         }
         getAbility();
     }, [selectedAbility])
-
-    const handleChange = (e) => {
-        e.preventDefault()
-        setSelectedAbility(e.target.value)
-    }
 
     return (
         <>
             {loading ? 
                 <img id="pokeball" alt="pokeball" src='https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif'/> :
                 <div>
-                    <Controls abilities={abilityArray} selectedAbility={selectedAbility} handleChange={handleChange}/>
+                    <Controls abilities={abilityArray} selectedAbility={selectedAbility} handleChange={setSelectedAbility}/>
                     <PokemonList pokemon={pokemonList}/>   
                 </div>
             }

@@ -11,7 +11,7 @@ function Controls({ abilities, selectedAbility, handleChange }){
             </div>
             <div>
                 <h1>Select an Ability:</h1>
-                <select value={selectedAbility} onChange={(e) => handleChange(e)}>
+                <select value={selectedAbility} onChange={(e) => handleChange(e.target.value)}>
                     <option value='all'>All</option>
                     {filter.map(category => (
                         <option key={category} value={category}>{category}</option>
