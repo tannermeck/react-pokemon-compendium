@@ -15,11 +15,9 @@ export async function fetchAllAbilities(){
 }
 
 export async function fetchByAbility(selectedAbility){
-    // let url = 'https://pokedex-alchemy.herokuapp.com/api/pokedex/abilities';
     let url = `https://pokedex-alchemy.herokuapp.com/api/pokedex?ability=${selectedAbility}`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log('ability', data)
     return data.results;
 }
 // export { fetchPokemon, fetchAllAbilities, fetchByAbility };
