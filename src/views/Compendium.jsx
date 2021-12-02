@@ -3,8 +3,8 @@ import fetchPokemon from '../services/helper-functions';
 import './compendium.css';
 
 function Compendium(){
-    const [loading, setLoading] = useState(true)
-    const [pokemonList, setPokemonList] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [pokemonList, setPokemonList] = useState([]);
     
     useEffect(() => {
         setLoading(true)
