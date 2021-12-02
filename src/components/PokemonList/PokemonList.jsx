@@ -1,8 +1,8 @@
 import Pokemon from "../Pokemon/Pokemon";
 
-function PokemonList(){
+function PokemonList({ pokemon }){
     return (
-        <Pokemon />
+        <Pokemon pokemon={pokemon} />
     )
 }
 export default PokemonList;
