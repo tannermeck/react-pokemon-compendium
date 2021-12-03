@@ -7,7 +7,7 @@ import './compendium.css';
 function Compendium(){
     const [loading, setLoading] = useState(true);
     const [pokemonList, setPokemonList] = useState([]);
-    const [selectedAbility, setSelectedAbility] = useState('')
+    const [selectedAbility, setSelectedAbility] = useState('all')
     const [abilityArray, setAbilityArray] = useState([])
     
     useEffect(() => {
