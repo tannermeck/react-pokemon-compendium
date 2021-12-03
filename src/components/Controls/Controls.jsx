@@ -19,11 +19,13 @@ function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPo
             {selectedAbility !== 'all' &&
                 <div className="sortPokemon">
                     <h1 className="controlLabel">Sort By Pokemon:</h1>
-                    <label className="label1" htmlFor="sort1">Ascending
-                        <input id="sort1" type="radio" name="sort" value="asc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "asc"}/>
+                    <input id="sort1" type="radio" name="sort" value="asc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "asc"}/>
+                    <label className="label1" htmlFor="sort1">
+                        Ascending
                     </label>
-                    <label htmlFor="sort2">Descending
-                        <input id="sort2" type="radio" name="sort" value="desc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "desc"}/>
+                    <input id="sort2" type="radio" name="sort" value="desc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "desc"}/>
+                    <label htmlFor="sort2">
+                        Descending
                     </label>
                 </div>
             }
