@@ -1,16 +1,13 @@
-import { filterDropDown } from "../../utils/utils";
 import './controls.css';
 
 function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPokemon }){
-    const filter = filterDropDown(abilities, selectedAbility)
-    console.log('DROP', filter)
     return (
         <>
             <div>
                 <h1>Filter By Ability:</h1>
                 <select value={selectedAbility} onChange={(e) => handleChange(e.target.value)}>
                     <option key="all" value='all'>All</option>
-                    {filter.map(category => (
+                    {abilities.map(category => (
                         <option key={category} value={category}>{category}</option>
                         ))}
                 </select>

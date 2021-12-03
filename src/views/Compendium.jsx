@@ -9,7 +9,7 @@ function Compendium(){
     const [pokemonList, setPokemonList] = useState([]);
     const [selectedAbility, setSelectedAbility] = useState('all')
     const [abilityArray, setAbilityArray] = useState([])
-    const [sortPokemon, setSortPokemon] = useState('')
+    const [sortPokemon, setSortPokemon] = useState('asc')
     
     useEffect(() => {
         setLoading(true)
