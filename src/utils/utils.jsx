@@ -1,7 +1,6 @@
 export function filterDropDown(abilities, selectedAbility){
     //need each item in array to be unique
     let arr = []
-    // (selectedAbility !== 'all') ? let arr = [selectedAbility, ] : arr
     if (selectedAbility !== 'all') {
         arr.push(selectedAbility)
         for (let i = 0; i < 10; i++){
