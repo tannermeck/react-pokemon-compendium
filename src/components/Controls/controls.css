@@ -7,7 +7,7 @@
 .controlLabel {
     color: #ffcb05
 }
-input[type="radio"]:checked + label:checked {
+input[type="radio"]:checked + label {
     color: #ffcb05;
 }
 input[type="radio"] {
