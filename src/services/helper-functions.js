@@ -22,6 +22,3 @@ export async function fetchByAbility(selectedAbility, sortPokemon){
     const data = await res.json();
     return data.results;
 }
-// https://pokedex-alchemy.herokuapp.com/api/pokedex?sort=pokemon&direction=asc&ability=soundproof
-
-// export { fetchPokemon, fetchAllAbilities, fetchByAbility };
