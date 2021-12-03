@@ -9,7 +9,7 @@ function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPo
             <div>
                 <h1>Filter By Ability:</h1>
                 <select value={selectedAbility} onChange={(e) => handleChange(e.target.value)}>
-                    <option value='all'>All</option>
+                    <option key="all" value='all'>All</option>
                     {filter.map(category => (
                         <option key={category} value={category}>{category}</option>
                         ))}
@@ -23,10 +23,10 @@ function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPo
                 <div className="sortPokemon">
                     <h1>Sort By Pokemon:</h1>
                     <label htmlFor="sort">Ascending
-                        <input type="radio" name="sort" value="asc" onChange={(e) => handleSort(e.target.value)}/>
+                        <input type="radio" name="sort" value="asc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "asc"}/>
                     </label>
                     <label htmlFor="sort">Descending
-                        <input type="radio" name="sort" value="desc" onChange={(e) => handleSort(e.target.value)}/>
+                        <input type="radio" name="sort" value="desc" onChange={(e) => handleSort(e.target.value)} checked={sortPokemon === "desc"}/>
                     </label>
                 </div>
             }

@@ -9,6 +9,7 @@ export async function fetchAllAbilities(){
     let url = 'https://pokedex-alchemy.herokuapp.com/api/pokedex/abilities';
     const res = await fetch(url);
     const data = await res.json();
+    //filter 10 abilities
     return data.map(ability => (
         ability.ability
     ))
