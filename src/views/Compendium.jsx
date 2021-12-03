@@ -9,6 +9,7 @@ function Compendium(){
     const [pokemonList, setPokemonList] = useState([]);
     const [selectedAbility, setSelectedAbility] = useState('all')
     const [abilityArray, setAbilityArray] = useState([])
+    const [sortPokemon, setSortPokemon] = useState('')
     
     useEffect(() => {
         setLoading(true)
@@ -32,19 +33,19 @@ function Compendium(){
         async function getAbility(){
             if (!selectedAbility) return;
                 setLoading(true)
-                const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility) : await fetchPokemon();;
+                const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility, sortPokemon) : await fetchPokemon();;
                 setPokemonList(filteredPokemon);
+                // setSortPokemon(prevState => prevState);
                 setLoading(false);
         }
         getAbility();
-    }, [selectedAbility])
-
+    }, [selectedAbility, sortPokemon])
     return (
         <>
             {loading ? 
                 <img id="pokeball" alt="pokeball" src='https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif'/> :
                 <div>
-                    <Controls abilities={abilityArray} selectedAbility={selectedAbility} handleChange={setSelectedAbility}/>
+                    <Controls abilities={abilityArray} selectedAbility={selectedAbility} handleChange={setSelectedAbility} handleSort={setSortPokemon} sortPokemon={sortPokemon}/>
                     <PokemonList pokemon={pokemonList}/>   
                 </div>
             }

@@ -14,8 +14,8 @@ export async function fetchAllAbilities(){
     ))
 }
 
-export async function fetchByAbility(selectedAbility){
-    let url = `https://pokedex-alchemy.herokuapp.com/api/pokedex?ability=${selectedAbility}`;
+export async function fetchByAbility(selectedAbility, sortPokemon){
+    let url = `https://pokedex-alchemy.herokuapp.com/api/pokedex?sort=pokemon&direction=${sortPokemon}&ability=${selectedAbility}`;
     const res = await fetch(url);
     const data = await res.json();
     return data.results;

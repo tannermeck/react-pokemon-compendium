@@ -1,8 +1,9 @@
 import { filterDropDown } from "../../utils/utils";
+import './controls.css';
 
-function Controls({ abilities, selectedAbility, handleChange }){
+function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPokemon }){
     const filter = filterDropDown(abilities, selectedAbility)
-    console.log('DROP', selectedAbility)
+    console.log('DROP', sortPokemon)
     return (
         <>
             <div>
@@ -18,15 +19,17 @@ function Controls({ abilities, selectedAbility, handleChange }){
                 <h1>Ability:</h1>
                 <h1>{`${selectedAbility}`}</h1>
             </div>
-            <div>
-                <h1>Sort By Pokemon:</h1>
-                <label>Ascending
-                    <input type="radio" name="sort" value="ascending" />
-                </label>
-                <label>Descending
-                    <input type="radio" name="sort" value="descending" />
-                </label>
-            </div>
+            {selectedAbility !== 'all' &&
+                <div className="sortPokemon">
+                    <h1>Sort By Pokemon:</h1>
+                    <label htmlFor="sort">Ascending
+                        <input type="radio" name="sort" value="asc" onChange={(e) => handleSort(e.target.value)}/>
+                    </label>
+                    <label htmlFor="sort">Descending
+                        <input type="radio" name="sort" value="desc" onChange={(e) => handleSort(e.target.value)}/>
+                    </label>
+                </div>
+            }
         </>
     )
 }
