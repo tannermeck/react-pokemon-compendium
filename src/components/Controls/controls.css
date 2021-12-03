@@ -1,4 +1,4 @@
-input[type="radio"]:checked + label {
+input[type="radio"]:checked {
     border: 2px solid white;
 }
 .sortPokemon {

@@ -35,7 +35,7 @@ function Compendium(){
                 setLoading(true)
                 const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility, sortPokemon) : await fetchPokemon();;
                 setPokemonList(filteredPokemon);
-                // setSortPokemon(prevState => prevState);
+                // setSortPokemon(prevState => `${prevState}`);
                 setLoading(false);
         }
         getAbility();
