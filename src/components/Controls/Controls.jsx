@@ -3,7 +3,7 @@ import './controls.css';
 
 function Controls({ abilities, selectedAbility, handleChange, handleSort, sortPokemon }){
     const filter = filterDropDown(abilities, selectedAbility)
-    console.log('DROP', sortPokemon)
+    console.log('DROP', filter)
     return (
         <>
             <div>

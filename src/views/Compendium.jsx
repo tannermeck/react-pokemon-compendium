@@ -23,17 +23,19 @@ function Compendium(){
 
     useEffect(() => {
         async function getAllAbilities(){
-            const abilityArray = await fetchAllAbilities();
-            setAbilityArray(abilityArray);
+            if (selectedAbility === 'all'){
+                const abilityArray = await fetchAllAbilities();
+                setAbilityArray(abilityArray);
+            }
         }
         getAllAbilities();
-    }, [])
+    }, [selectedAbility])
 
     useEffect(() => {
         async function getAbility(){
             if (!selectedAbility) return;
                 setLoading(true)
-                const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility, sortPokemon) : await fetchPokemon();;
+                const filteredPokemon = selectedAbility !== 'all' ? await fetchByAbility(selectedAbility, sortPokemon) : await fetchPokemon();
                 setPokemonList(filteredPokemon);
                 // setSortPokemon(prevState => `${prevState}`);
                 setLoading(false);
