@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render a dropdown and radio button 1`] = `
+<div>
+  <section
+    class="controlsContainer"
+  >
+    <div>
+      <h1
+        class="controlLabel"
+      >
+        Filter By Ability:
+      </h1>
+      <select>
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="trace"
+        >
+          trace
+        </option>
+        <option
+          value="klutz"
+        >
+          klutz
+        </option>
+        <option
+          value="damp"
+        >
+          damp
+        </option>
+      </select>
+    </div>
+    <div>
+      <h1
+        class="controlLabel"
+      >
+        Ability:
+      </h1>
+      <h1>
+        damp
+      </h1>
+    </div>
+    <div
+      class="sortPokemon"
+    >
+      <h1
+        class="controlLabel"
+      >
+        Sort By Pokemon:
+      </h1>
+      <input
+        checked=""
+        id="sort1"
+        name="sort"
+        type="radio"
+        value="asc"
+      />
+      <label
+        class="label1"
+        for="sort1"
+      >
+        Ascending
+      </label>
+      <input
+        id="sort2"
+        name="sort"
+        type="radio"
+        value="desc"
+      />
+      <label
+        for="sort2"
+      >
+        Descending
+      </label>
+    </div>
+  </section>
+</div>
+`;

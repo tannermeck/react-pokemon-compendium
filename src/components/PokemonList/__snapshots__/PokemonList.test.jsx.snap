@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a PokemonList component 1`] = `
+<div>
+  <ul>
+    <div
+      class="pokeContainer"
+    >
+      <li
+        class="pokemonName"
+      >
+        butterfree
+      </li>
+      <img
+        alt="butterfree"
+        class="pokemonImage"
+        src="www.pokemon.com"
+      />
+      <p
+        class="pokemonType"
+      >
+        Type: bug/flying
+      </p>
+      <p
+        class="pokemonType"
+      >
+        Ability: compound-eyes
+      </p>
+      <p
+        class="pokemonType"
+      >
+        Defense Level: 
+        50
+      </p>
+    </div>
+  </ul>
+</div>
+`;

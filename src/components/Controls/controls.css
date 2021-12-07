@@ -1,0 +1,35 @@
+.controlsContainer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.controlLabel {
+    color: #ffcb05
+}
+input[type="radio"]:checked + label {
+    color: #ffcb05;
+}
+input[type="radio"] {
+    display: none;
+}
+label:hover {
+    cursor: pointer;
+    color: #ffcb05;
+}
+.sortPokemon {
+    color: white;
+}
+div {
+    text-align: center;
+}
+select {
+    height: 30px;
+    font-size: 20px;
+}
+label {
+    font-weight: bold;
+}
+.label1 {
+    padding-right: 10px;
+}
